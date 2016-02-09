@@ -92,7 +92,7 @@
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.celiaq"><span class="radio">{{ 'Celiaco' | translate }}</span></p>
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.alergia"><span class="radio">{{ 'Alergia' | translate }}</span></p>
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.others"><span class="radio">{{ 'Otros' | translate }}</span></p>
-			<input class="boton_03" type="submit" value="Enviar" ng-click="vm.submitNewUserForm()">
+			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitNewUserForm()">
 		</div>
 	</form>
 	
@@ -105,7 +105,7 @@
 			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.contactForm.mail">
 			<p class="p_contacto">{{ 'Comentarios' | translate }}</p>
 			<textarea class="textfield_02" required ng-model="vm.contactForm.comments"></textarea>
-			<input class="boton_03" type="submit" value="Enviar" ng-click="vm.submitContactForm()"><br>
+			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitContactForm()"><br>
 			<p class="texto_inicial">{{ 'ContactaEn' | translate }}<br>
 				<a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>
 			 {{ 'TeLlamamos' | translate }}</p>
