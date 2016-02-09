@@ -23,9 +23,10 @@ function configFunction($routeProvider, $translateProvider) {
 		suffix: '.json'
 	});
 	$translateProvider.preferredLanguage('es');
+	$translateProvider.useSanitizeValueStrategy();
 
 	$routeProvider
 		.otherwise({
-			redirectTo: '/main',
+			redirectTo: '/',
 		});
 }

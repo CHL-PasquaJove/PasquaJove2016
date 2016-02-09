@@ -9,6 +9,7 @@ var angular = require('angular');
 module.exports = angular.module('webPasquaJove.responsables', [
 
 	require('./routes'),
+	require('./services')
 ])
 
 .name;

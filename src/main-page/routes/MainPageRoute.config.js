@@ -9,7 +9,7 @@ module.exports = MainPageRouteConfig;
 
 /* @ngInject */
 function MainPageRouteConfig($routeProvider) {
-	$routeProvider.when('/main', {
+	$routeProvider.when('/', {
 		template: require('./MainPageRoute.tpl.html'),
 		controller: MainPageController,
 		controllerAs: 'vm'
