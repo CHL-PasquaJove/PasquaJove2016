@@ -13,6 +13,10 @@
 /*Tablets*/
 @media screen and (min-width: 768px) {
     /*INICIO CABECERA*/
+    .conjunto{
+        padding-right: 5px;
+        padding-top: 5px;
+    }
     #cabecera{
         height: 350px;
         background-image: url(../img/cabecera_medium.jpg);
@@ -85,7 +89,7 @@
     .descarga p{
         font-size: 15px;
         margin:0;
-        margin-top: 8px;
+        margin-top: 10px;
     }
     .fa-download{
         font-size: 20px;
@@ -121,17 +125,29 @@
     .p_contacto{
         font-size: 15px;
     }
+    .textfield_01,.textfield_02{
+        height:23px;
+    }
+    input[type="text"],input[type="email"],input[type="tel"]{
+        font-size: 13.5px;
+    }
     .textfield_02{
         font-size: 15px;
     }
     .checkbox{
         margin-top: 10px;
     }
+    .checkbox-inline{
+        margin-top: 5px;
+    }
     .boton_03{
         margin:22px auto;
     }
     .contacto_02 .texto_inicial{
         text-align: left;
+    }
+    .radio{
+        padding-top: 10px;
     }
     /*INICIO FOOTER*/
     .caja_footer{
@@ -170,15 +186,21 @@
     }
     #logo_chl{
         height:70px;
+        margin-left: 0;
     }
     h1{
         margin-top: 85px;
         line-height: 0.95;
         font-size: 45px;
+        margin-left: 0;
     }
     #lema_01{
         height:50px;
         margin-top:25px;
+        margin-left: 0;
+    }
+    #lema_02{
+        margin-left: 0;
     }
     /*INICIO INTRO*/
     .texto_inicial{
@@ -199,9 +221,6 @@
         padding-left: 2%;
         padding-right:2%;
         width: 992px;
-    }
-    .descarga{
-        margin-bottom: 0;
     }
     /*INFO ADICIONAL*/
     .caja_adicional{
@@ -225,10 +244,11 @@
     .descarga{
         padding-left: 7px;
         margin-top:15px;
+        margin-bottom: 0;
     }
     .descarga p{
         font-size: 14px;
-        margin-top: 9px;
+        margin-top: 11px;
     }
     .fa-download{
         font-size: 18px;
@@ -266,7 +286,7 @@
         font-size:14px;
     }
     /*INICIO APUNTARSE*/
-    .contacto_01{
+    .contacto_01, contacto_02{
         max-width: 992px;
         padding:2%;
         margin: 35px auto;
