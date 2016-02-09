@@ -17,8 +17,22 @@ function ResponsablePageRouteConfig($routeProvider) {
 }
 
 /* @ngInject */
-function ResponsablePageController() {
+function ResponsablePageController(responsablesService) {
 	var vm = this;
 
-	console.log(vm);
+	vm.credentials = {};
+
+	vm.login = login;
+
+	activate();
+	////////////
+
+	function activate() {
+		vm.users = responsablesService.getUsers();
+		vm.contacts = responsablesService.getContacts();
+	}
+
+	function login() {
+		console.log(vm.credentials);
+	}
 }

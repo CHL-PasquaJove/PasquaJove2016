@@ -40,7 +40,8 @@
         line-height: 0.95;
         font-size: 40px;
     }
-    #lema_01{
+    #lema_01,
+    #lema_03{
         height:45px;
         margin-top:15px;
     }
@@ -194,7 +195,8 @@
         font-size: 45px;
         margin-left: 0;
     }
-    #lema_01{
+    #lema_01,
+    #lema_03{
         height:50px;
         margin-top:25px;
         margin-left: 0;

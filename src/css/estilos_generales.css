@@ -305,6 +305,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"],input[type=
     color: #607d8b;
     font-weight: 700;
     outline: 0;
+    cursor:pointer;
     /*-webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
