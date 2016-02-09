@@ -1,7 +1,4 @@
-Angular Shopping Cart Demo
+Web Pasqua Jove 2016
 ==========================
 
-This is a demo of an scalable Angular Application.
-
-
-TBD: better documentation how is built and basics, more info, read code, I'm still adding components"# PasquaJove2016" 
+CHL Pasqua Jove Web 2016
