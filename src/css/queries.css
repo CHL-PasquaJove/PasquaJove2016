@@ -128,7 +128,7 @@
     .textfield_01,.textfield_02{
         height:23px;
     }
-    input[type="text"],input[type="email"],input[type="tel"]{
+    input[type="text"],input[type="email"],input[type="tel"],input[type="password"]{
         font-size: 13.5px;
     }
     .textfield_02{
