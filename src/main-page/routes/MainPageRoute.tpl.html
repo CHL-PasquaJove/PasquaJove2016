@@ -1,18 +1,23 @@
 <div>
 	<!-- INICIO CABECERA  -->
 	<div id="cabecera">
-		<div class="cabecera_negro">
-			<div style="height:20px;width:40px;background-color:red;top:10px; right:10px" ng-click="vm.changeLanguage('es')"></div>
-			<div style="height:20px;width:40px;background-color:blue;top:10px; right:10px" ng-click="vm.changeLanguage('ca')"></div>
-				<a href="#/responsables">Responsables</a>
-			</div>
-			<div class="cabecera_texto">
-				<img id="logo_chl" src="svg/logo_christi.svg" alt="Christifideles Laici">
-				<h1>{{ 'XX' | translate }}<br>{{ 'Pascua' | translate}}<br>{{ 'Joven' |translate}}</h1>
-				<img id="lema_01" src="svg/lema_01.svg" alt="Ven y sígueme">
-				<img id="lema_02" src="svg/lema_02.svg" alt="Mt 19:21">
-			</div>
-		</div>
+            <div class="cabecera_negro">
+                <div class="conjunto">
+                    <div ng-click="vm.changeLanguage('es')">
+                        <img class="banderita" src="svg/icono_esp.svg" alt="Español">
+                    </div>
+                    <div ng-click="vm.changeLanguage('ca')">
+                        <img class="banderita" src="svg/icono_cat.svg" alt="Catalán">
+                    </div>
+                </div>
+                <div class="cabecera_texto">
+                    <img id="logo_chl" src="svg/logo_christi.svg" alt="Christifideles Laici">
+                    <h1>{{ 'XX' | translate }}<br>{{ 'Pascua' | translate}}<br>{{ 'Joven' |translate}}</h1>
+                    <img id="lema_01" src="svg/lema_01.svg" alt="Ven y sígueme">
+                    <!--<img id="lema_01" src="svg/lema_01_cat.svg" alt="Ven y sígueme">-->
+                    <img id="lema_02" src="svg/lema_02.svg" alt="Mt 19:21">
+                </div>
+            </div>
 	</div>
 	
 	<!-- INICIO INTRODUCCIÓN  -->

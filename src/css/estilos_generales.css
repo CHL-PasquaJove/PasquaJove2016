@@ -24,6 +24,18 @@ a:hover{
     color:inherit;
 }
 /*INICIO INTRODUCCION*/
+.banderita{
+    height: 25px;
+    width: 25px;
+    float:right;
+    position: relative;
+    padding-right: 6px;
+    padding-top: 6px;
+}
+.conjunto{
+    float:right;
+    position: relative;
+}
 .texto_inicial{
     margin:0;
     font-weight: 400;
@@ -41,7 +53,7 @@ a:hover{
 /*BOTON INFO ADICIONAL*/
 .boton_01{
     display:table;
-    width: 93.74%;
+    width: 90.9%;
     height:60px;
     margin-left: 3.13%;
     margin-right: 3.13%;
@@ -119,6 +131,7 @@ li{
     border: solid 2px #607d8b;
     border-radius: 5px;
     padding-left: 10px;
+    cursor: pointer;
 }
 .descarga p{
     font-family: 'Merriweather Sans', sans-serif;
@@ -126,7 +139,7 @@ li{
     font-size: 17px;
     color: #607d8b;
     margin:0;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 .fa-download{
     font-size: 25px;
@@ -226,7 +239,7 @@ li{
 .textfield_01,.textfield_02{
     margin-top: 4px;
     margin-bottom: 15px;
-    height: 35px;
+    height: 28px;
     padding: 5px;
     width:95.5%;
     max-width: 500px;
@@ -248,7 +261,7 @@ li{
 }
 input[type="text"],input[type="email"],input[type="tel"] {
     font-family: 'Merriweather', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     color: #607d8b;
     font-weight: 300;
 }
@@ -258,22 +271,25 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus {
 }
 .checkbox-inline{
     display: table;
-    margin-top: 7px;
+    margin:0;
+    margin-top: 10px;
+}
+.checkbox-inline *{
+    display:table-cell;
+    vertical-align: middle;
 }
 .checkbox{
     width:20px;
     height:20px;
-    display:table-cell;
-    vertical-align: middle;
+    margin:0;
 }
 .radio {
     font-family: 'Merriweather', sans-serif;
     font-size: 16px;
     color: #607d8b;
     font-weight: 300;
-    margin-left: 2px;
-    display:table-cell;
-    vertical-align: middle;
+    padding-top: 2px;
+    padding-left: 5px;
 }
 .boton_03{
     display:block;
