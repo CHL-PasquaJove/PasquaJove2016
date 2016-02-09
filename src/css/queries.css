@@ -1,0 +1,313 @@
+@media  only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 192dpi),
+        only screen and (max-device-width:768px){
+ 	#cabecera {
+            background-image: url(../img/cabecera_smallretina.jpg);
+            background-size: 768px 288px;
+	}
+        #botones{
+            background-image: url(../img/botones_smallretina.jpg);
+            background-size: 768px 250px;
+        }
+}
+/*Tablets*/
+@media screen and (min-width: 768px) {
+    /*INICIO CABECERA*/
+    #cabecera{
+        height: 350px;
+        background-image: url(../img/cabecera_medium.jpg);
+        background-size: 992px 350px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cabecera_negro{
+        height:350px;
+    }
+    .cabecera_texto{
+        display:block;
+        margin:0 auto;
+        max-width: 768px;
+    }
+    #logo_chl{
+        height:65px;
+    }
+    h1{
+        margin-top: 25px;
+        line-height: 0.95;
+        font-size: 40px;
+    }
+    #lema_01{
+        height:45px;
+        margin-top:15px;
+    }
+    #lema_02{
+        height:20px;
+        margin-top:7px;
+    }
+    /*INICIO INTRO*/
+    .texto_inicial{
+        font-size: 18px;
+        text-align: center;
+    }
+    /*TEXTO ADICIONAL*/
+    .boton_01{
+        height:40px;
+        margin-top:3.13%;
+        background-color: #f8f8f8;
+        border-bottom: solid 3px #607d8b
+    }
+    .boton_01 > *{
+        color:#607d8b;
+    }
+    .texto_boton_01{
+        font-size: 18px;
+        text-align: center;
+        color: #607d8b;
+    }
+    .fa-angle-down{
+        display: none;
+    }
+    /*INFO ADICIONAL*/
+    .caja_adicional{
+        display: block;
+    }
+    li{
+        font-size: 15px;
+        line-height: 1.35;
+        padding-bottom: 8px;
+    }
+    .descarga{
+        height: 40px;
+        width: 230px;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+    .descarga p{
+        font-size: 15px;
+        margin:0;
+        margin-top: 8px;
+    }
+    .fa-download{
+        font-size: 20px;
+        margin-top:-20px;
+        margin-right: 8px;
+    } 
+    /*BOTONES*/
+    #botones{
+        background-image: url(../img/botones_medium.jpg);
+        background-size: 992px 250px;
+        background-repeat: no-repeat;
+    }
+    .pregunta{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+    .b_contacto_01,.b_contacto_02{
+        height:50px;
+    }
+    .b_contacto_01{
+        float:left;
+        margin-left:19%;
+    }
+    .b_contacto_02{
+        float:right;
+        margin-right:19%;
+    }
+    .texto_boton_02_a,.texto_boton_02_b{
+        font-size: 15px;
+    }
+    /*INICIO APUNTARSE*/
+    .p_contacto{
+        font-size: 15px;
+    }
+    .textfield_02{
+        font-size: 15px;
+    }
+    .checkbox{
+        margin-top: 10px;
+    }
+    .boton_03{
+        margin:22px auto;
+    }
+    .contacto_02 .texto_inicial{
+        text-align: left;
+    }
+    /*INICIO FOOTER*/
+    .caja_footer{
+        height: 120px;
+        padding: 17px 6%;
+    }
+    .caja_footer p{
+        font-size: 15px;
+    }
+    .caja_footer div{
+        width: 150px;
+    }
+    .redes_sociales{
+        height: 45px;
+        width:45px;
+        margin-left:12px;
+        margin-right:12px;
+    }
+}
+/*Desktop*/
+@media screen and (min-width: 992px) { 
+    #cabecera{
+        height: 450px;
+        background-image: url(../img/cabecera_big.jpg);
+        background-size: 1920px 450px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cabecera_negro{
+        height:450px;
+    }
+    .cabecera_texto{
+        display:block;
+        margin:0 auto;
+        max-width: 992px;
+    }
+    #logo_chl{
+        height:70px;
+    }
+    h1{
+        margin-top: 85px;
+        line-height: 0.95;
+        font-size: 45px;
+    }
+    #lema_01{
+        height:50px;
+        margin-top:25px;
+    }
+    /*INICIO INTRO*/
+    .texto_inicial{
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .caja_inicial{
+        display:block;
+        margin:35px auto;
+        padding:2%;
+        max-width: 992px;
+    }
+    /*TEXTO ADICIONAL*/
+    .boton_01{
+        height:40px;
+        margin: 35px auto;
+        margin-bottom:0;
+        padding-left: 2%;
+        padding-right:2%;
+        width: 992px;
+    }
+    .descarga{
+        margin-bottom: 0;
+    }
+    /*INFO ADICIONAL*/
+    .caja_adicional{
+        margin:0 auto;
+        max-width: 992px;
+        padding: 2%;
+    }
+    li{
+        font-size: 14px;
+        line-height: 1.30;
+        padding-bottom: 8px;
+    }
+    ul{
+        width:465px;
+    }
+    .ul_b{
+        float:right;
+        margin-top: -355px;
+        margin-bottom:0px;
+    }
+    .descarga{
+        padding-left: 7px;
+        margin-top:15px;
+    }
+    .descarga p{
+        font-size: 14px;
+        margin-top: 9px;
+    }
+    .fa-download{
+        font-size: 18px;
+        margin-top:-17px;
+        margin-right: 10px;
+    } 
+    /*BOTONES*/
+    #botones{
+        max-width: 1039px;
+        margin:35px auto;
+        background-image: url(../img/botones_big.jpg);
+        background-size: 1039px 250px;
+        background-repeat: no-repeat;
+    }
+    .pregunta{
+        margin-top: 30px;
+        margin-bottom: 8px;
+    }
+    .b_contacto_01,.b_contacto_02{
+        height:50px;
+    }
+    .b_contacto_01{
+        margin-left:260px;;
+    }
+    .b_contacto_02{
+        margin-right:260px;
+    }
+    .texto_boton_02_a,.texto_boton_02_b{
+        font-size: 14px;
+    }
+    .checkbox{
+        margin-top: 30px;
+    }
+    .radio{
+        font-size:14px;
+    }
+    /*INICIO APUNTARSE*/
+    .contacto_01{
+        max-width: 992px;
+        padding:2%;
+        margin: 35px auto;
+    }
+    .p_contacto{
+        font-size: 14px;
+    }
+    .textfield_02{
+        font-size: 14px;
+    }
+    .checkbox{
+        margin-top: 10px;
+    }
+    .boton_03{
+        margin:22px auto;
+        margin-bottom: 0;
+    }
+    .contacto_02 .boton_03{
+        margin-top: 5px;
+    }
+    .contacto_02 .texto_inicial{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .p_correo{
+    }
+    /*INICIO FOOTER*/
+    .caja_footer{
+        height: 120px;
+        padding: 17px 6%;
+    }
+    .caja_footer p{
+        font-size: 15px;
+    }
+    .caja_footer div{
+        width: 150px;
+    }
+    .redes_sociales{
+        height: 45px;
+        width:45px;
+        margin-left:12px;
+        margin-right:12px;
+    }
+}

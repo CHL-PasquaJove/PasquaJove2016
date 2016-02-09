@@ -1,0 +1,122 @@
+<div>
+	<!-- INICIO CABECERA  -->
+	<div id="cabecera">
+		<div class="cabecera_negro">
+			<div style="height:20px;width:40px;background-color:red;top:10px; right:10px" ng-click="vm.changeLanguage('es')"></div>
+			<div style="height:20px;width:40px;background-color:blue;top:10px; right:10px" ng-click="vm.changeLanguage('ca')"></div>
+				<a href="#/responsables">Responsables</a>
+			</div>
+			<div class="cabecera_texto">
+				<img id="logo_chl" src="svg/logo_christi.svg" alt="Christifideles Laici">
+				<h1>{{ 'XX' | translate }}<br>{{ 'Pascua' | translate}}<br>{{ 'Joven' |translate}}</h1>
+				<img id="lema_01" src="svg/lema_01.svg" alt="Ven y sígueme">
+				<img id="lema_02" src="svg/lema_02.svg" alt="Mt 19:21">
+			</div>
+		</div>
+	</div>
+	
+	<!-- INICIO INTRODUCCIÓN  -->
+	<div class="caja_inicial">
+		<p class="texto_inicial">{{ 'InitText' | translate}}</p>
+	</div>
+	
+	<!-- INICIO INFO ADICIONAL  -->
+	<div class="boton_01" ng-click="vm.clickInfo()">
+		<p class="texto_boton_01">{{ 'AdditionalInfo' | translate}}</p>
+		<i class="fa fa-angle-down" ng-class="{'active':vm.additionalInfo}"></i>
+	</div>
+	<div class="caja_adicional" ng-class="{'active':vm.additionalInfo}">
+		<ul>
+			<li class="negrita">{{ 'EdadJovenes' | translate }}</li>
+			<li>{{ 'EdadEntre' | translate }}</li>
+			<li class="negrita">{{ 'Cuando' | translate }}</li>
+			<li>{{ 'Fecha' | translate }}</li>
+			<li class="negrita">{{ 'Donde' | translate }}</li>
+			<li>{{ 'Sitio' | translate }}</li>
+			<li>{{ 'Direccion' | translate }}</li>
+			<li class="negrita">{{ 'Llevar' | translate}}</li>
+			<li>{{ 'Material' | translate }}</li>
+			<li>{{ 'Nota' | translate }}<span class="light"> {{ 'MenorEdad' | translate }}</span></li>
+		</ul>
+		<div class="descarga"><p>{{ 'DownloadAuth' | translate }}</p><i class="fa fa-download"></i></div>
+		<ul class="ul_b">
+			<li class="negrita">{{ 'Cuanto' | translate }}</li>
+			<li>{{ 'Precio' | translate }} <span class="negrita">{{ 'TotalPrecio' | translate }}</span>.<br>
+				{{ 'FechaLimite' | translate }}<span class="negrita">{{ 'ValorFechaLimite' | translate }}</span>{{ 'Cuenta' | translate }}<br>
+				<span class="negrita">{{ 'NumCuenta' | translate }}</span><br>
+				<span>{{ 'Asunto' | translate }}</span><br>
+				<span>{{ 'DescuentoNota' | translate }}</span>
+			</li>
+			<li class="negrita">{{ 'Descuento' | translate }} </li>
+			<li>{{ 'ValorDescuento' | translate }}</li>			
+		</ul>
+	</div>
+	
+	<!-- INICIO BOTONES CONTACTO  -->
+	<div id="botones">
+		<div class="botones_negro">
+			<p class="pregunta">{{ 'Interesado' | translate }}</p>
+			<div class="b_contacto_01" ng-click="vm.signUp()" ng-class="{'active':vm.showInscription}">
+				<span class="texto_boton_02_a" ng-class="{'active':vm.showInscription}">{{ 'Apuntate' | translate }}</span>
+			</div>
+			<div class="b_contacto_02" ng-click="vm.contactUs()" ng-class="{'active':vm.showContact}">
+				 <span class="texto_boton_02_b" ng-class="{'active':vm.showContact}">{{ 'Contacta' | translate }}</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- INICIO INSCRIPCION  -->
+	<form class="contacto_01" ng-class="{'active':vm.showInscription}">
+		<div>
+			<p class="p_contacto">{{ 'Nombre' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.name">
+			<p class="p_contacto">{{ 'Apellidos' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.surname">
+			<p class="p_contacto">{{ 'FechaNacimiento' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.birthday">
+			<p class="p_contacto">{{ 'Email' |translate }}</p>
+			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.newInscription.mail">
+			<p class="p_contacto">{{ 'Phone' | translate }}</p>
+			<input type="tel" name="textfield" class="textfield_01" required ng-model="vm.newInscription.phone">
+			<p class="p_contacto">{{ 'Grupo' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.movement">
+			<p class="p_contacto">{{ 'Invitado' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.invited">
+			<p class="p_contacto">{{ 'Comida' | translate }}</p>
+			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.diabetes"><span class="radio">{{ 'Diabetes' | translate }}</span></p>
+			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.celiaq"><span class="radio">{{ 'Celiaco' | translate }}</span></p>
+			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.alergia"><span class="radio">{{ 'Alergia' | translate }}</span></p>
+			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.others"><span class="radio">{{ 'Otros' | translate }}</span></p>
+			<input class="boton_03" type="submit" value="Enviar" ng-click="vm.submitNewUserForm()">
+		</div>
+	</form>
+	
+	<!-- INICIO CONTACTO  -->
+	<form class="contacto_02" ng-class="{'active':vm.showContact}">
+		<div>
+			<p class="p_contacto">{{ 'Nombre' | translate }}</p>
+			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.contactForm.name">
+			<p class="p_contacto">{{ 'Email' |translate }}</p>
+			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.contactForm.mail">
+			<p class="p_contacto">{{ 'Comentarios' | translate }}</p>
+			<textarea class="textfield_02" required ng-model="vm.contactForm.comments"></textarea>
+			<input class="boton_03" type="submit" value="Enviar" ng-click="vm.submitContactForm()"><br>
+			<p class="texto_inicial">{{ 'ContactaEn' | translate }}<br>
+				<a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>
+			 {{ 'TeLlamamos' | translate }}</p>
+		</div>
+	</form>
+	
+	<!-- INICIO FOOTER  -->
+	<div class="caja_footer">
+		<p>{{ 'RedesSociales' | translate }}</p>
+		<div>
+			<a href="https://www.facebook.com/Pascua-Joven-CHL-318741938336975/" title="Facebook CHL" target="new">
+				<img class="redes_sociales" src="svg/icono_facebook.svg" alt="facebook">
+			</a>
+			<a href="https://www.instagram.com/chl_pascuajoven/" title="Instagram CHL" target="new">
+				<img class="redes_sociales" src="svg/icono_instagram.svg" alt="instagram">
+			</a>
+		</div>
+	</div>
+</div>

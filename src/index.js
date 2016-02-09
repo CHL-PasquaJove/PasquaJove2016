@@ -2,21 +2,30 @@
 
 var angular = require('angular');
 
-module.exports = angular.module('shoppingCartDemoApp', [
+module.exports = angular.module('webPasquaJove', [
 
-	require('./cart'),
-	require('./cart-summary'),
-	require('./products'),
-	require('./products-catalog'),
+	require('./main-page'),
+	require('./responsables'),
 
 	require('angular-route'),
+	require('angular-translate'),
+	require('angular-translate-loader-static-files')
 ])
-
-.config(function($routeProvider) {
-
-	$routeProvider.otherwise({
-		redirectTo: '/catalog',
-	});
-})
-
+.config(configFunction)
 .name;
+
+configFunction.$inject = ['$routeProvider', '$translateProvider'];
+
+function configFunction($routeProvider, $translateProvider) {
+	
+	$translateProvider.useStaticFilesLoader({
+		prefix: './i18n/language_',
+		suffix: '.json'
+	});
+	$translateProvider.preferredLanguage('es');
+
+	$routeProvider
+		.otherwise({
+			redirectTo: '/main',
+		});
+}

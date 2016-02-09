@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html ng-app="shoppingCartDemoApp" ng-strict-di>
+<html ng-app="webPasquaJove" ng-strict-di>
 <head>
-	<title>Angular Shopping Cart Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ 'Title' | translate}}</title>
+	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">-->
+	<link href="image/chl_ico.ico" rel="shortcut icon">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> <!--FUENTE Fontawesome-->
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'> <!--FUENTE Merriweather-->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>  <!--FUENTE Raleway Heavy-->
+	<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700,800' rel='stylesheet' type='text/css'> <!--FUENTE Merriweather Sans-->
+	<link href="css/estilos_generales.css" rel="stylesheet" type="text/css"><!--Estilos generales-->
+	<link href="css/estilo_cabecera.css" rel="stylesheet" type="text/css"><!--Estilo cabecera-->
+	<link href="css/queries.css" rel="stylesheet" type="queries/css"><!--Media Queries-->
+	<title>XX Pasqua Jove</title>
 	<!-- build:css({.tmp,.}) app.css -->
-	<link href="bundle.css" rel='stylesheet' type='text/css'>
 	<!-- endbuild -->
 
 	<style>
@@ -14,32 +25,7 @@
 </head>
 <body ng-cloak>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#/catalog">Shopping Cart demo</a>
-			</div>
-
-			<div>
-				<ul class="nav navbar-nav">
-					<li><a href="#/catalog">Catalog</a></li>
-					<li><a href="#/cart">
-						Cart
-						<scd-cart-getter name="cart"></scd-cart-getter>
-						<span ng-show="cart.totalItems">
-							({{cart.totalItems}})
-						</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="https://github.com/drpicox/angular-shopping-cart-demo" target="_blank">Github</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<div class="container">
+	<div>
 		<ng-view autoscroll></ng-view>
 	</div>
 
