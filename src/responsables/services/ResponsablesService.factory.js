@@ -11,18 +11,28 @@ module.exports = ResponsablesServiceFactory;
 function ResponsablesServiceFactory($http) {
 	var service = {
 		login: login,
-		getUsers: getUsers
+		getUsers: getUsers,
+		getContacts: getContacts
 	};
 
 	return service;
 
 	//////
 
-	function login() {
-		console.log($http);
+	function login(loginParams) {
+		console.log(loginParams);
+		var url = 'http://www.pascuajoven.com/api/' + 'newUser';
+		return $http.post(url, loginParams);
     }
 
     function getUsers() {
-    	return [];
+		var url = 'http://www.pascuajoven.com/api/' + 'getUsers';
+		return $http.post(url);
+    	//return [];
+    }
+
+    function getContacts() {
+    	var url = 'http://www.pascuajoven.com/api/' + 'getContacts';
+		return $http.post(url);
     }
 }

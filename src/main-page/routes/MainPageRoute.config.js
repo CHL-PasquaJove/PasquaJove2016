@@ -23,6 +23,7 @@ function MainPageController($translate, mainService) {
 	vm.showContact = false;
 	vm.showInscription = false;
 	vm.additionalInfo = false;
+	vm.language = 'es';
 
 	vm.newInscription = {};
 	vm.contactForm = {};
@@ -57,10 +58,14 @@ function MainPageController($translate, mainService) {
 
 	function submitContactForm() {
 		console.log('contact', vm.contactForm);
-		mainService.sendMessage(vm.contactForm);
+		var response = mainService.sendMessage(vm.contactForm);
+
+		console.log(response);
 	}
 
 	function changeLanguage(lang) {
 		$translate.use(lang);
+
+		vm.language = lang;
 	}
 }

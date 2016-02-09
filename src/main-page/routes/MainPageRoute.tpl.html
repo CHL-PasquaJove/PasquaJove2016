@@ -13,8 +13,8 @@
                 <div class="cabecera_texto">
                     <img id="logo_chl" src="svg/logo_christi.svg" alt="Christifideles Laici">
                     <h1>{{ 'XX' | translate }}<br>{{ 'Pascua' | translate}}<br>{{ 'Joven' |translate}}</h1>
-                    <img id="lema_01" src="svg/lema_01.svg" alt="Ven y sígueme">
-                    <!--<img id="lema_01" src="svg/lema_01_cat.svg" alt="Ven y sígueme">-->
+                    <img id="lema_01"  ng-show="vm.language==='es'" src="svg/lema_01.svg" alt="Ven y sígueme">
+                    <img id="lema_03"  ng-show="vm.language==='ca'" src="svg/lema_01_cat.svg" alt="Vine i segueix-me">
                     <img id="lema_02" src="svg/lema_02.svg" alt="Mt 19:21">
                 </div>
             </div>

@@ -29,6 +29,7 @@ function ResponsablePageController(responsablesService) {
 
 	function activate() {
 		vm.users = responsablesService.getUsers();
+		vm.contacts = responsablesService.getContacts();
 	}
 
 	function login() {

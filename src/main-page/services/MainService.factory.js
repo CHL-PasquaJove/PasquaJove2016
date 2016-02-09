@@ -19,11 +19,15 @@ function MainServiceFactory($http) {
 
 	//////
 
-	function registerNewUser() {
-		console.log($http);
+	function registerNewUser(userParams) {
+		console.log(userParams);
+		var url = 'http://www.pascuajoven.com/api/' + 'newUser';
+		return $http.post(url, userParams);
     }
 
-    function sendMessage() {
-
+    function sendMessage(messageParams) {
+    	console.log(messageParams);
+		var url = 'http://www.pascuajoven.com/api/' + 'contact';
+		return $http.post(url, messageParams);
     }
 }
