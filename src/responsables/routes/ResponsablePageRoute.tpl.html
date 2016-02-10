@@ -97,32 +97,40 @@
     <div class="resp_bot" ng-click="vm.showContactsList()"><p>INFORMACIÓN</p></div>
     <div class="resp_bot" ng-click="vm.showUsersList()"><p>APUNTADOS</p></div>
     <ul ng-show="vm.userListActive" ng-class="{'active':vm.userListActive}">
-        <li class="persona"> <k>1. Hola k ase</k>
+        <li ng-repeat="item in vm.users" class="persona"> <k>1. {{item.name}} {{item.surname}}</k>
             <div>
-                <span><n>Fecha de nacimiento:</n> 18/02/1989</span> <n>-</n> <span><n>Edad:</n></span> 
+                <span><n>Fecha de nacimiento:</n> {{item.birthday}}</span> <n>-</n> <span><n>Edad:</n></span> 
             </div>
             <div>
-                <span><n>Correo:</n></span> <n>-</n> <span><n>Teléfono:</n></span> 
+                <span><n>Correo:</n> {{item.mail}}</span> <n>-</n> <span><n>Teléfono:</n> {{item.phone}}</span> 
             </div>
 
             <div>
-                <span><n>Movimiento:</n></span>
+                <span><n>Movimiento:</n> {{item.movement}}</span>
             </div>
             <div>
-                <span><n>Invitado por:</n></span>
+                <span><n>Invitado por:</n> {{item.invited}}</span>
             </div>
             <div>
-                <span><n>Problemas con la comida:</n></span>
+                <span><n>Problemas con la comida:</n> {{item.problems}}</span>
             </div>
         </li>
     </ul>
     <ul ng-show="vm.contactListActive" ng-class="{'active':vm.contactListActive}">
-        <li class="persona"> <k>1. Hola k ase</k>
+        <!--<li class="persona"> <k>1. Hola k ase</k>
             <div>
                 <span><n>Correo:</n></span>
             </div>
             <div>
                 <span><n>Comentarios:</n></span>
+            </div>
+        </li>-->
+        <li ng-repeat="item in vm.contacts" class="persona"> <k>1. {{item.name}}</k>
+            <div>
+                <span><n>Correo:</n> {{item.mail}}</span>
+            </div>
+            <div>
+                <span><n>Comentarios:</n> {{item.comments}}</span>
             </div>
         </li>
     </ul>
