@@ -87,16 +87,16 @@
         padding-left:20px;
     }
 </style>
-<div class="login">
+<div class="login" ng-show="vm.showLogin">
     <div class="jesus"></div>
-    <input type="text" name="textfield" class="textfield_03" placeholder="Usuario">
-    <input type="password" name="textfield" class="textfield_03" placeholder="Contraseña">
-    <input class="boton_login" type="button" value="Validar" ng-click="">
+    <input type="text" name="textfield" class="textfield_03" placeholder="Usuario" ng-model="vm.credentials.username">
+    <input type="password" name="textfield" class="textfield_03" placeholder="Contraseña" ng-model="vm.credentials.password">
+    <input class="boton_login" type="button" value="Validar" ng-click="vm.login()">
 </div>
-<div class="fondo">
-    <div class="resp_bot"><p>INFORMACIÓN</p></div>
-    <div class="resp_bot"><p>APUNTADOS</p></div>
-    <ul>
+<div class="fondo" ng-show="vm.showLists">
+    <div class="resp_bot" ng-click="vm.showContactsList()"><p>INFORMACIÓN</p></div>
+    <div class="resp_bot" ng-click="vm.showUsersList()"><p>APUNTADOS</p></div>
+    <ul ng-show="vm.userListActive" ng-class="{'active':vm.userListActive}">
         <li class="persona"> <k>1. Hola k ase</k>
             <div>
                 <span><n>Fecha de nacimiento:</n> 18/02/1989</span> <n>-</n> <span><n>Edad:</n></span> 
@@ -116,7 +116,7 @@
             </div>
         </li>
     </ul>
-    <ul>
+    <ul ng-show="vm.contactListActive" ng-class="{'active':vm.contactListActive}">
         <li class="persona"> <k>1. Hola k ase</k>
             <div>
                 <span><n>Correo:</n></span>

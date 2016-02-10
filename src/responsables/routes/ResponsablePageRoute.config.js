@@ -20,9 +20,15 @@ function ResponsablePageRouteConfig($routeProvider) {
 function ResponsablePageController(responsablesService) {
 	var vm = this;
 
+	vm.userListActive = true;
+	vm.contactListActive = false;
 	vm.credentials = {};
+	vm.showLogin = true;
+	vm.showLists = false;
 
 	vm.login = login;
+	vm.showUsersList = showUsersList;
+	vm.showContactsList = showContactsList;
 
 	activate();
 	////////////
@@ -34,5 +40,19 @@ function ResponsablePageController(responsablesService) {
 
 	function login() {
 		console.log(vm.credentials);
+		if ( vm.credentials.username === 'victor' && vm.credentials.password === 'victor') {
+			vm.showLogin = false;
+			vm.showLists = true;
+		}
+	}
+
+	function showUsersList() {
+		vm.userListActive = true;
+		vm.contactListActive = false;
+	}
+
+	function showContactsList() {
+		vm.userListActive = false;
+		vm.contactListActive = true;
 	}
 }
