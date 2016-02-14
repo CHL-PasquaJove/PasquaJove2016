@@ -46,5 +46,7 @@
 	"Comentarios":"Comentaris",
 	"ContactaEn":"També pots contactar amb nosaltres a:",
 	"TeLlamamos":"En cas de que prefereixis contactar amb nosaltres per telèfon, envia'ns el teu número de contacte i ens encarregarem de trucar-te.",
-	"RedesSociales":"També ens pots trobar a les xarxes socials!"
+	"RedesSociales":"També ens pots trobar a les xarxes socials!",
+	"RegistradoOk": "Genial! Ja estàs apuntat! Si necessites alguna cosa no dubtis en posar-te en contacte amb nosaltres!",
+	"RegistradoKo": "Ups... Alguna cosa ha sortit malament, si us plau, intenta-ho més tard."
 }

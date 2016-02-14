@@ -61,7 +61,7 @@
     }
     .resp_bot.active{
         background-color: #607d8b;
-        border: none;
+        border: none;   
     }
     .resp_bot p{
         color:#607d8b;
@@ -156,47 +156,39 @@
 <div class="login" ng-show="vm.showLogin">
     <div class="jesus"></div>
     <input type="text" name="textfield" class="textfield_03" placeholder="Usuario" ng-model="vm.credentials.username">
-    <input type="password" name="textfield" class="textfield_03" placeholder="Contraseña" ng-model="vm.credentials.password">
+    <input type="password" name="textfield" class="textfield_03" placeholder="Contraseña" ng-model="vm.credentials.password" ng-keypress="$event.keyCode === 13 ? vm.login() : 0">
     <input class="boton_login" type="button" value="Validar" ng-click="vm.login()">
 </div>
 <div class="fondo" ng-show="vm.showLists">
-    <div class="resp_bot" ng-click="vm.showContactsList()"><p>INFORMACIÓN</p></div>
-    <div class="resp_bot" ng-click="vm.showUsersList()"><p>APUNTADOS</p></div>
-    <ul ng-show="vm.userListActive" ng-class="{'active':vm.userListActive}">
+    <div class="resp_bot" ng-click="vm.showContactsList()"  ng-class="{'active':vm.contactListActive}"><p ng-class="{'active':vm.contactListActive}">{{ 'InfoMayus' | translate }}</p></div>
+    <div class="resp_bot" ng-click="vm.showUsersList()" ng-class="{'active':vm.userListActive}"><p ng-class="{'active':vm.userListActive}">{{ 'Apuntados' | translate }}</p></div>
+    <ul ng-show="vm.userListActive">
         <li ng-repeat="item in vm.users" class="persona"> <k>1. {{item.name}} {{item.surname}}</k>
             <div>
-                <span><n>Fecha de nacimiento:</n> {{item.birthday}}</span> <n>-</n> <span><n>Edad:</n></span> 
+                <span><n>{{ 'FechaNoFormat' | translate }}:</n> {{item.birthday}}</span> <n>-</n> <span><n>{{ 'Edad' | translate }}:</n></span> 
             </div>
             <div>
-                <span><n>Correo:</n> {{item.mail}}</span> <n>-</n> <span><n>Teléfono:</n> {{item.phone}}</span> 
+                <span><n>{{ 'Mail' | translate }}:</n> {{item.mail}}</span> <n>-</n> <span><n>{{ 'Tlf' | translate }}:</n> {{item.phone}}</span> 
             </div>
 
             <div>
-                <span><n>Movimiento:</n> {{item.movement}}</span>
+                <span><n>{{ 'Movimiento' | translate }}:</n> {{item.movement}}</span>
             </div>
             <div>
-                <span><n>Invitado por:</n> {{item.invited}}</span>
+                <span><n>{{ 'InvitadoPor' | translate }}:</n> {{item.invited}}</span>
             </div>
             <div>
-                <span><n>Problemas con la comida:</n> {{item.problems}}</span>
+                <span><n>{{ 'ProblemasComida' | translate }}:</n> {{item.problems}}</span>
             </div>
         </li>
     </ul>
-    <ul ng-show="vm.contactListActive" ng-class="{'active':vm.contactListActive}">
-        <!--<li class="persona"> <k>1. Hola k ase</k>
-            <div>
-                <span><n>Correo:</n></span>
-            </div>
-            <div>
-                <span><n>Comentarios:</n></span>
-            </div>
-        </li>-->
+    <ul ng-show="vm.contactListActive">
         <li ng-repeat="item in vm.contacts" class="persona"> <k>1. {{item.name}}</k>
             <div>
-                <span><n>Correo:</n> {{item.mail}}</span>
+                <span><n>{{ 'Mail' | translate }}:</n> {{item.mail}}</span>
             </div>
             <div>
-                <span><n>Comentarios:</n> {{item.comments}}</span>
+                <span><n>{{ 'Comentarios' | translate }}:</n> {{item.comments}}</span>
             </div>
         </li>
     </ul>

@@ -46,5 +46,17 @@
 	"Comentarios":"Comentarios",
 	"ContactaEn":"También puedes contactar con nosotros en:",
 	"TeLlamamos":"En caso de que prefieras contactar con nosotros por teléfono, envíanos tu número de contacto y nos encargaremos de llamarte.",
-	"RedesSociales":"¡También nos puedes encontrar en las redes sociales!"
+	"RedesSociales":"¡También nos puedes encontrar en las redes sociales!",
+	"RegistradoOk": "¡Genial! ¡Ya estás apuntado! ¡Si necesitas algo no dudes en ponerte en contacto con nosotros!",
+	"RegistradoKo": "Ups... Algo ha salido mal, por favor, inténtalo más tarde.",
+	"ContactoOk":"¡Genial! Tenemos tus datos y tu consulta, en breve nos pondremos en contacto contigo.",
+	"InfoMayus":"INFORMACIÓN",
+	"Apuntados":"APUNTADOS",
+	"FechaNoFormat":"Fecha de nacimiento",
+	"Edad":"Edad",
+	"Mail":"Correo",
+	"Tlf":"Teléfono",
+	"Movimiento":"Movimiento",
+	"InvitadoPor":"Invitado por",
+	"ProblemasComida":"Problemas con la comida"
 }

@@ -24,6 +24,9 @@ function MainPageController($translate, mainService) {
 	vm.showInscription = false;
 	vm.additionalInfo = false;
 	vm.language = 'es';
+	vm.newUserSuccess = false;
+	vm.newUserError = false;
+	vm.sendingData = false;
 
 	vm.newInscription = {};
 	vm.contactForm = {};
@@ -52,15 +55,29 @@ function MainPageController($translate, mainService) {
 	}
 
 	function submitNewUserForm() {
-		console.log('user', vm.newInscription);
-		mainService.registerNewUser(vm.newInscription);
+		vm.sendingData = true;
+		mainService.registerNewUser(vm.newInscription)
+			.then(function(){
+				vm.sendingData = false;
+				vm.newUserSuccess = true;
+			})
+			.catch(function(){
+				vm.sendingData = false;
+				vm.newUserError = true;
+			});
 	}
 
 	function submitContactForm() {
-		console.log('contact', vm.contactForm);
-		var response = mainService.sendMessage(vm.contactForm);
-
-		console.log(response);
+		vm.sendingData = true;
+		mainService.sendMessage(vm.contactForm)
+			.then(function(){
+				vm.sendingData = false;
+				vm.contactSuccess = false;
+			})
+			.catch(function(){
+				vm.sendingData = false;
+				vm.contactError = true;
+			});
 	}
 
 	function changeLanguage(lang) {
