@@ -8,8 +8,10 @@ module.exports = angular.module('webPasquaJove', [
 	require('./responsables'),
 
 	require('angular-route'),
+	require('angular-cookies'),
 	require('angular-translate'),
-	require('angular-translate-loader-static-files')
+	require('angular-translate-loader-static-files'),
+	require('angular-translate-storage-local'),
 ])
 .config(configFunction)
 .name;
@@ -23,6 +25,7 @@ function configFunction($routeProvider, $translateProvider) {
 		suffix: '.json'
 	});
 	$translateProvider.preferredLanguage('es');
+	//$translateProvider.useLocalStorage();
 	$translateProvider.useSanitizeValueStrategy();
 
 	$routeProvider

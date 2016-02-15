@@ -259,10 +259,10 @@
     } 
     /*BOTONES*/
     #botones{
-        max-width: 1039px;
+        max-width: 1044.3px;
         margin:35px auto;
         background-image: url(../img/botones_big.jpg);
-        background-size: 1039px 250px;
+        background-size: 1044.3px 250px;
         background-repeat: no-repeat;
     }
     .pregunta{
@@ -292,6 +292,11 @@
         max-width: 992px;
         padding:2%;
         margin: 35px auto;
+    }
+    .contacto_02.active{
+        margin:35px auto;
+        padding:2%;
+        max-width: 992px;
     }
     .p_contacto{
         font-size: 14px;
