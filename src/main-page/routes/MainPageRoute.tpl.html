@@ -93,9 +93,9 @@
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.alergia"><span class="radio">{{ 'Alergia' | translate }}</span></p>
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.others"><span class="radio">{{ 'Otros' | translate }}</span></p>
 			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitNewUserForm()" ng-disabled="vm.newUserSuccess || vm.sendingData" ng-class="{'disabled': vm.newUserSuccess || vm.sendingData}">
-			<div>
-				<span class="correcto" nong-show="vm.newUserSuccess">¡Enhorabuena! ¡Ya te has registrado! <i class="fa fa-check"></i> {{ 'RegistradoOk' | translate}}</span>
-				<span class="error" nong-show="vm.newUserError">Parece que falta algo...{{ 'RegistradoKo' | translate}}</span>
+			<div class="server_response">
+				<span class="correcto" ng-show="vm.newUserSuccess">{{ 'RegistradoOk' | translate}}<i class="fa fa-check"></i></span>
+				<span class="error" ng-show="vm.newUserError">{{ 'RegistradoKo' | translate}}</span>
 			</div>
 		</div>
 	</form>
@@ -110,9 +110,9 @@
 			<p class="p_contacto">{{ 'Comentarios' | translate }}</p>
 			<textarea class="textfield_02" required ng-model="vm.contactForm.comments"></textarea>
 			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitContactForm()" ng-disabled="vm.contactSuccess || vm.sendingData" ng-class="{'disabled': vm.contactSuccess || vm.sendingData}"><br>
-			<div>
-				<span class="correcto" nong-show="vm.contactSuccess">{{ 'ContactoOk' | translate}}</span>
-				<span class="error" nong-show="vm.contactError">{{ 'RegistradoKo' | translate}}</span>
+			<div class="server_response">
+				<span class="correcto" ng-show="vm.contactSuccess">{{ 'ContactoOk' | translate}}</span>
+				<span class="error" ng-show="vm.contactError">{{ 'RegistradoKo' | translate}}</span>
 			</div>
 			<p class="texto_inicial">{{ 'ContactaEn' | translate }}<br>
 				<a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>

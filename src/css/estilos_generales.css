@@ -334,6 +334,11 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"],input[type=
     font-weight: 700;
     font-size: 18px;
 }
+.server_response {
+    margin-top:20px !important;
+    display: block;
+    text-align: center;
+}
 /*INICIO FOOTER*/
 .caja_footer{
     margin:0;
