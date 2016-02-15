@@ -99,7 +99,7 @@
     <ul ng-show="vm.userListActive" ng-class="{'active':vm.userListActive}">
         <li ng-repeat="item in vm.users" class="persona"> <k>1. {{item.name}} {{item.surname}}</k>
             <div>
-                <span><n>Fecha de nacimiento:</n> {{item.birthday}}</span> <n>-</n> <span><n>Edad:</n></span> 
+                <span><n>Fecha de nacimiento:</n> {{item.birthday}}</span> <n>-</n> <span><n>Edad:</n> {{item.age}}</span> 
             </div>
             <div>
                 <span><n>Correo:</n> {{item.mail}}</span> <n>-</n> <span><n>Teléfono:</n> {{item.phone}}</span> 

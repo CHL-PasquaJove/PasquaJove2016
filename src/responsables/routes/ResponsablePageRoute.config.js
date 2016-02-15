@@ -34,7 +34,8 @@ function ResponsablePageController(responsablesService) {
 	////////////
 
 	function activate() {
-		vm.users = responsablesService.getUsers();
+		//vm.users = responsablesService.getUsers();
+		calculateAge(responsablesService.getUsers());
 		vm.contacts = responsablesService.getContacts();
 	}
 
@@ -54,5 +55,22 @@ function ResponsablePageController(responsablesService) {
 	function showContactsList() {
 		vm.userListActive = false;
 		vm.contactListActive = true;
+	}
+
+	function calculateAge(list) {
+		var actual, listLength;
+		for ( var i = 0; i < listLength; i++ ) {
+			actual = list[i];
+
+			actual.age = _calculateAge( new Date(actual.birthday) );
+		}
+
+		vm.users = list;
+	}
+
+	function _calculateAge(birthday) { // birthday is a date
+	    var ageDifMs = Date.now() - birthday.getTime();
+	    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+	    return Math.abs(ageDate.getUTCFullYear() - 1970);
 	}
 }
