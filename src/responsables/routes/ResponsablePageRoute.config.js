@@ -58,7 +58,7 @@ function ResponsablePageController(responsablesService) {
 	}
 
 	function calculateAge(list) {
-		var actual, listLength;
+		var actual, listLength = list.length;
 		for ( var i = 0; i < listLength; i++ ) {
 			actual = list[i];
 
