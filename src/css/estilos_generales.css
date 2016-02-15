@@ -307,17 +307,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"],input[type=
     font-weight: 700;
     outline: 0;
     cursor:pointer;
-    /*-webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;*/
 }
-/*.boton_03.active{
-    outline: 0;
-    background-color: #607d8b;
-    border: none;
-    color: #ffffff;
-}*/
 .p_correo{
     font-weight:700;
     line-height: 3;
@@ -325,6 +315,24 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"],input[type=
 }
 .p_correo:hover{
     color:#607d8b;
+}
+.correcto{
+    margin: 10px auto;
+    font-family: 'Merriweather Sans', sans-serif;
+    color:#64DD17;
+    font-weight: 700;
+    font-size: 18px;
+}
+.fa-check{
+    font-size:19px;
+    color:#64DD17;
+}
+.error{
+    margin: 10px auto;
+    font-family: 'Merriweather Sans', sans-serif;
+    color:#d50000;
+    font-weight: 700;
+    font-size: 18px;
 }
 /*INICIO FOOTER*/
 .caja_footer{

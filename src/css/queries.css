@@ -150,6 +150,9 @@
     .radio{
         padding-top: 10px;
     }
+    .correcto,.error{
+        font-size:15px;
+    }
     /*INICIO FOOTER*/
     .caja_footer{
         height: 120px;
@@ -319,6 +322,9 @@
         margin-top: 15px;
     }
     .p_correo{
+    }
+    .correcto,.error{
+        font-size:14px;
     }
     /*INICIO FOOTER*/
     .caja_footer{
