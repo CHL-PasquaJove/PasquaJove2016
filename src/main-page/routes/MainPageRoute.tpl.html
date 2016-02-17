@@ -96,6 +96,7 @@
 			<div class="server_response">
 				<span class="correcto" ng-show="vm.newUserSuccess">{{ 'RegistradoOk' | translate}}<i class="fa fa-check"></i></span>
 				<span class="error" ng-show="vm.newUserError">{{ 'RegistradoKo' | translate}}</span>
+                                <span class="enviando">Enviando<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
 			</div>
 		</div>
 	</form>
@@ -113,6 +114,7 @@
 			<div class="server_response">
 				<span class="correcto" ng-show="vm.contactSuccess">{{ 'ContactoOk' | translate}}</span>
 				<span class="error" ng-show="vm.contactError">{{ 'RegistradoKo' | translate}}</span>
+                                <span class="enviando">Enviando<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
 			</div>
 			<p class="texto_inicial">{{ 'ContactaEn' | translate }}<br>
 				<a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>

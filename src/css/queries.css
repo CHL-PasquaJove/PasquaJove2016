@@ -134,6 +134,7 @@
     }
     .textfield_02{
         font-size: 15px;
+        min-height: 100px;
     }
     .checkbox{
         margin-top: 10px;
