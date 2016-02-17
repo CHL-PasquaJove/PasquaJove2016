@@ -39,10 +39,10 @@ module.exports = (grunt) ->
 
 		copy:
 			options: onlyIf: 'modified'
-			fonts: src: 'src/fonts/*', dest: 'www/'
-			i18n: src: 'src/i18n/*', dest: 'www/'
-			css: src: 'src/css/*', dest: 'www/'
-			img: src: 'src/img/*', dest: 'www/'
+			customFonts: expand:true, cwd: 'src/', src:'fonts/*', dest: 'www'
+			i18n: expand: true, cwd: 'src/', src: 'i18n/*', dest: 'www/'
+			css: expand: true, cwd: 'src/', src: 'css/*', dest: 'www/'
+			img: expand: true, cwd: 'src/', src: 'img/*', dest: 'www/'
 			images:
 				expand: true,
 				cwd: 'src',

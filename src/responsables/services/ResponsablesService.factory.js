@@ -20,13 +20,13 @@ function ResponsablesServiceFactory($http) {
 	//////
 
 	function login(loginParams) {
-		var url = 'http://www.pascuajoven.com/api/' + 'newUser';
+		var url = 'http://api.pascuajoven.com/api/' + 'loginUser';
 		return $http.post(url, loginParams);
     }
 
     function getUsers() {
-		var url = 'http://www.pascuajoven.com/api/' + 'getUsers';
-		console.log(url);
+		var url = 'http://api.pascuajoven.com/api/' + 'getUsers';
+		/*console.log(url);
 		return [{
 			name: 'name',
 			surname: 'surname',
@@ -72,13 +72,13 @@ function ResponsablesServiceFactory($http) {
 			movement: 'Movemeeeent',
 			invited: 'my sister',
 			problems: 'Nope'
-		}];
-		//return $http.post(url);
+		}];*/
+		return $http.post(url);
     }
 
     function getContacts() {
-    	var url = 'http://www.pascuajoven.com/api/' + 'getContacts';
-		console.log(url);
+    	var url = 'http://api.pascuajoven.com/api/' + 'getContacts';
+		/*console.log(url);
 		return [{
 			name: 'a name',
 			mail: 'a mail',
@@ -99,7 +99,7 @@ function ResponsablesServiceFactory($http) {
 			name: 'a name',
 			mail: 'a mail',
 			comment: 'this is a comment'
-		}];
-		//return $http.post(url);
+		}];*/
+		return $http.post(url);
     }
 }

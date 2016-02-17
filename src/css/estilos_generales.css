@@ -346,6 +346,11 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input
     display: block;
     text-align: center;
 }
+
+.server_response.contact_form_server{
+    margin-top: 0px !important;
+}
+
 .enviando{
     color:#989898;
     font-family: 'Merriweather Sans', sans-serif;

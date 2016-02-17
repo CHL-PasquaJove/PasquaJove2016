@@ -78,15 +78,15 @@
 			<p class="p_contacto">{{ 'Apellidos' | translate }}</p>
 			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.surname">
 			<p class="p_contacto">{{ 'FechaNacimiento' | translate }}</p>
-			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.birthday">
+			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.newInscription.birth">
 			<p class="p_contacto">{{ 'Email' |translate }}</p>
-			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.newInscription.mail">
+			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.newInscription.email">
 			<p class="p_contacto">{{ 'Phone' | translate }}</p>
 			<input type="tel" name="textfield" class="textfield_01" required ng-model="vm.newInscription.phone">
 			<p class="p_contacto">{{ 'Grupo' | translate }}</p>
-			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.movement">
+			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.group">
 			<p class="p_contacto">{{ 'Invitado' | translate }}</p>
-			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.invited">
+			<input type="text" name="textfield" class="textfield_01" ng-model="vm.newInscription.invitedBy">
 			<p class="p_contacto">{{ 'Comida' | translate }}</p>
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.diabetes"><span class="radio">{{ 'Diabetes' | translate }}</span></p>
 			<p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox" ng-model="vm.newInscription.celiaq"><span class="radio">{{ 'Celiaco' | translate }}</span></p>
@@ -96,7 +96,7 @@
 			<div class="server_response">
 				<span class="correcto" ng-show="vm.newUserSuccess">{{ 'RegistradoOk' | translate}}<i class="fa fa-check"></i></span>
 				<span class="error" ng-show="vm.newUserError">{{ 'RegistradoKo' | translate}}</span>
-                                <span class="enviando">Enviando<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
+                <span ng-show="vm.sendingData" class="enviando">{{ 'Enviando' | translate }}<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
 			</div>
 		</div>
 	</form>
@@ -107,17 +107,17 @@
 			<p class="p_contacto">{{ 'Nombre' | translate }}</p>
 			<input type="text" name="textfield" class="textfield_01" required ng-model="vm.contactForm.name">
 			<p class="p_contacto">{{ 'Email' |translate }}</p>
-			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.contactForm.mail">
+			<input type="email" name="textfield" class="textfield_01" required ng-model="vm.contactForm.email">
 			<p class="p_contacto">{{ 'Comentarios' | translate }}</p>
-			<textarea class="textfield_02" required ng-model="vm.contactForm.comments"></textarea>
+			<textarea class="textfield_02" required ng-model="vm.contactForm.comment"></textarea>
 			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitContactForm()" ng-disabled="vm.contactSuccess || vm.sendingData" ng-class="{'disabled': vm.contactSuccess || vm.sendingData}"><br>
-			<div class="server_response">
+			<div class="server_response contact_form_server">
 				<span class="correcto" ng-show="vm.contactSuccess">{{ 'ContactoOk' | translate}}</span>
 				<span class="error" ng-show="vm.contactError">{{ 'RegistradoKo' | translate}}</span>
-                                <span class="enviando">Enviando<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
+                <span ng-show="vm.sendingData" class="enviando">{{ 'Enviando' | translate }}<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
 			</div>
 			<p class="texto_inicial">{{ 'ContactaEn' | translate }}<br>
-				<a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>
+				<a href="mailto:pasquajove@gmail.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>
 			 {{ 'TeLlamamos' | translate }}</p>
 		</div>
 	</form>
