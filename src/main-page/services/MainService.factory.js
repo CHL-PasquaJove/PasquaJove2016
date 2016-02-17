@@ -21,13 +21,13 @@ function MainServiceFactory($http) {
 
 	function registerNewUser(userParams) {
 		console.log(userParams);
-		var url = 'http://www.pascuajoven.com/api/' + 'newUser';
+		var url = 'http://api.pascuajoven.com/api/' + 'newUser';
 		return $http.post(url, userParams);
     }
 
     function sendMessage(messageParams) {
     	console.log(messageParams);
-		var url = 'http://www.pascuajoven.com/api/' + 'contact';
+		var url = 'http://api.pascuajoven.com/api/' + 'newContact';
 		return $http.post(url, messageParams);
     }
 }
