@@ -2,7 +2,7 @@
   "name": "angular-shopping-cart-demo",
   "version": "1.1.0",
   "description": "Demo of an angular shopping cart",
-  "main": "index.js",
+  "main": "srv/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
