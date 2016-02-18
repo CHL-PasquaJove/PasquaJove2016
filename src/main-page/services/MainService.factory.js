@@ -27,7 +27,7 @@ function MainServiceFactory($http) {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			data: messageParams
+			data: userParams
 		};
 		
 		return $http(req);
