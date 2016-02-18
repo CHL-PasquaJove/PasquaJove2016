@@ -8,6 +8,7 @@ const http         = require('http'),
 var port = env.OPENSHIFT_NODEJS_PORT || '3000'
 var ip = env.OPENSHIFT_NODEJS_IP || 'localhost'
 var base = env.OPENSHIFT_REPO_DIR || '../'
+var filterUrlRegex = /([^\?]+)(?:\?|)(.+)?/;
 
 function notFound(err, req, res) {
   console.log(req.method + " " + req.url, err);
@@ -15,7 +16,12 @@ function notFound(err, req, res) {
   res.end();
 }
 
+function filterUrl(url) {
+  return url.match(filterUrlRegex)[1];
+}
+
 function respond(req, res) {
+  var url = filterUrl(req.url);
   function sendFile(file_path, cb) {
     fs.readFile(file_path, function (err, data) {
       if (err) {
@@ -29,10 +35,10 @@ function respond(req, res) {
   }
 
   function firstTry(err, req, res) {
-    sendFile(base + 'www/src' + req.url, notFound);
+    sendFile(base + 'www/src' + url, notFound);
   }
 
-  sendFile(base + 'www' + req.url, firstTry)
+  sendFile(base + 'www' + url, firstTry)
 }
 
 var server = http.createServer(function (req, res) {

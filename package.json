@@ -42,6 +42,7 @@
     "angular-translate": "~2.9.0",
     "angular-cookies":"^1.4.7",
     "angular-translate-loader-static-files":"~2.9.0",
-    "angular-translate-storage-local":"~2.9.0"
+    "angular-translate-storage-local":"~2.9.0",
+    "grunt-cli":"^0.1.13"
   }
 }
