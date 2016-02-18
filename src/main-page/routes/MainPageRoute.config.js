@@ -61,13 +61,13 @@ function MainPageController($translate, mainService) {
 			vm.newInscription.food.push('diabetes'); 
 		}
 		if ( vm.newInscription.celiaq ) { 
-			vm.newInscription.food.push('celiaquía'); 
+			vm.newInscription.food.push('celiac'); 
 		}
 		if ( vm.newInscription.alergia ) {
-			vm.newInscription.food.push('alergia'); 
+			vm.newInscription.food.push('allergies'); 
 		}
 		if ( vm.newInscription.others ) { 
-			vm.newInscription.food.push('otros'); 
+			vm.newInscription.food.push('other'); 
 		}
 
 		mainService.registerNewUser(vm.newInscription)
