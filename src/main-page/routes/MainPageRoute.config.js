@@ -56,6 +56,20 @@ function MainPageController($translate, mainService) {
 
 	function submitNewUserForm() {
 		vm.sendingData = true;
+		vm.newInscription.food = [];
+		if ( vm.newInscription.diabetes ) { 
+			vm.newInscription.food.push(vm.newInscription.diabetes); 
+		}
+		if ( vm.newInscription.celiaq ) { 
+			vm.newInscription.food.push(vm.newInscription.celiaq); 
+		}
+		if ( vm.newInscription.alergia ) {
+			vm.newInscription.food.push(vm.newInscription.alergia); 
+		}
+		if ( vm.newInscription.others ) { 
+			vm.newInscription.food.push(vm.newInscription.othersothers); 
+		}
+		
 		mainService.registerNewUser(vm.newInscription)
 			.then(function(){
 				vm.sendingData = false;
