@@ -73,11 +73,13 @@ function MainPageController($translate, mainService) {
 		mainService.registerNewUser(vm.newInscription)
 			.then(function(){
 				vm.sendingData = false;
+				vm.newUserError = false;
 				vm.newUserSuccess = true;
 			})
 			.catch(function(){
 				vm.sendingData = false;
 				vm.newUserError = true;
+				vm.newUserSuccess = false;
 			});
 	}
 
@@ -86,10 +88,12 @@ function MainPageController($translate, mainService) {
 		mainService.sendMessage(vm.contactForm)
 			.then(function(){
 				vm.sendingData = false;
-				vm.contactSuccess = false;
+				vm.contactSuccess = true;
+				vm.contactError = false;
 			})
 			.catch(function(){
 				vm.sendingData = false;
+				vm.contactSuccess = false;
 				vm.contactError = true;
 			});
 	}

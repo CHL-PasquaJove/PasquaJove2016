@@ -40,7 +40,6 @@ function ResponsablePageController(responsablesService) {
 	}
 
 	function login() {
-		console.log(vm.credentials);
 		if ( vm.credentials.username === 'victor' && vm.credentials.password === 'victor') {
 			vm.showLogin = false;
 			vm.showLists = true;
