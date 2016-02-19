@@ -34,9 +34,19 @@ function ResponsablePageController(responsablesService) {
 	////////////
 
 	function activate() {
-		//vm.users = responsablesService.getUsers();
-		calculateAge(responsablesService.getUsers());
-		vm.contacts = responsablesService.getContacts();
+		responsablesService.getUsers()
+			.then(getUsersResponse);
+		
+		responsablesService.getContacts()
+			.then(getContactsResponse);
+	}
+
+	function getUsersResponse(response) {
+		calculateAge(response.data);
+	}
+
+	function getContactsResponse(response) {
+		vm.contacts = response.data;
 	}
 
 	function login() {
