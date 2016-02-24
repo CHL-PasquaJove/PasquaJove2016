@@ -61,23 +61,25 @@ function MainPageController($translate, mainService) {
 			vm.newInscription.food.push('diabetes'); 
 		}
 		if ( vm.newInscription.celiaq ) { 
-			vm.newInscription.food.push('celiaquía'); 
+			vm.newInscription.food.push('celiac'); 
 		}
 		if ( vm.newInscription.alergia ) {
-			vm.newInscription.food.push('alergia'); 
+			vm.newInscription.food.push('allergies'); 
 		}
 		if ( vm.newInscription.others ) { 
-			vm.newInscription.food.push('otros'); 
+			vm.newInscription.food.push('other'); 
 		}
 
 		mainService.registerNewUser(vm.newInscription)
 			.then(function(){
 				vm.sendingData = false;
+				vm.newUserError = false;
 				vm.newUserSuccess = true;
 			})
 			.catch(function(){
 				vm.sendingData = false;
 				vm.newUserError = true;
+				vm.newUserSuccess = false;
 			});
 	}
 
@@ -86,10 +88,12 @@ function MainPageController($translate, mainService) {
 		mainService.sendMessage(vm.contactForm)
 			.then(function(){
 				vm.sendingData = false;
-				vm.contactSuccess = false;
+				vm.contactSuccess = true;
+				vm.contactError = false;
 			})
 			.catch(function(){
 				vm.sendingData = false;
+				vm.contactSuccess = false;
 				vm.contactError = true;
 			});
 	}

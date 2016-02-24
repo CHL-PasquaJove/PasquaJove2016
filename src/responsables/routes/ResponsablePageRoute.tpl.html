@@ -17,7 +17,7 @@
         height:100px;
         width:100px;
         border-radius: 50%;
-        background-image: url(../www/img/login.jpg);
+        background-image: url(../img/login.jpg);
         background-size: 135%;
         background-position: center;
         border: solid 6px #607d8b;
@@ -163,7 +163,7 @@
     <div class="resp_bot" ng-click="vm.showContactsList()"  ng-class="{'active':vm.contactListActive}"><p ng-class="{'active':vm.contactListActive}">{{ 'InfoMayus' | translate }}</p></div>
     <div class="resp_bot" ng-click="vm.showUsersList()" ng-class="{'active':vm.userListActive}"><p ng-class="{'active':vm.userListActive}">{{ 'Apuntados' | translate }}</p></div>
     <ul ng-show="vm.userListActive">
-        <li ng-repeat="item in vm.users" class="persona"> <k>1. {{item.name}} {{item.surname}}</k>
+        <li ng-repeat="item in vm.users" class="persona"> <k>{{$index + 1}} {{item.name}} {{item.surname}}</k>
             <div>
                 <span><n>{{ 'FechaNoFormat' | translate }}: </n> {{item.birthday}}</span> <n>-</n> <span><n>{{ 'Edad' | translate }}:</n> {{item.age}}</span> 
             </div>
@@ -183,7 +183,7 @@
         </li>
     </ul>
     <ul ng-show="vm.contactListActive">
-        <li ng-repeat="item in vm.contacts" class="persona"> <k>1. {{item.name}}</k>
+        <li ng-repeat="item in vm.contacts" class="persona"> <k>{{$index + 1}} {{item.name}}</k>
             <div>
                 <span><n>{{ 'Mail' | translate }}:</n> {{item.mail}}</span>
             </div>
