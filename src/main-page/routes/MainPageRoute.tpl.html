@@ -32,6 +32,8 @@
 	</div>
 	<div class="caja_adicional" ng-class="{'active':vm.additionalInfo}">
 		<ul>
+                        <li class="negrita">{{ 'Quees' | translate }}</li>
+                        <li>{{ 'Explicacion' | translate }}</li>
 			<li class="negrita">{{ 'EdadJovenes' | translate }}</li>
 			<li>{{ 'EdadEntre' | translate }}</li>
 			<li class="negrita">{{ 'Cuando' | translate }}</li>
@@ -39,22 +41,26 @@
 			<li class="negrita">{{ 'Donde' | translate }}</li>
 			<li>{{ 'Sitio' | translate }}</li>
 			<li>{{ 'Direccion' | translate }}</li>
-			<li class="negrita">{{ 'Llevar' | translate}}</li>
-			<li>{{ 'Material' | translate }}</li>
 			<li>{{ 'Nota' | translate }}<span class="light"> {{ 'MenorEdad' | translate }}</span></li>
 		</ul>
 		<div class="descarga"><p>{{ 'DownloadAuth' | translate }}</p><i class="fa fa-download"></i></div>
 		<ul class="ul_b">
+                        <li class="negrita">{{ 'Llevar' | translate}}</li>
+                        <li>{{ 'Material' | translate }}</li>
 			<li class="negrita">{{ 'Cuanto' | translate }}</li>
-			<li>{{ 'PrecioFinal' | translate }} <span class="negrita">{{ 'TotalPrecio' | translate }}</span>.
-				<span class="negrita">{{ 'Aunque' | translate }}</span><span>{{ 'RealizarPaga' | translate }}</span>
-				<span class="negrita azul">{{ 'Adelanto' | translate }}</span><span>{{ 'Recibir' | translate }}</span>
-				<span class="negrita azul">{{ 'DescuentoTotal' | translate }}</span><span>{{ 'SobrePrecioTotal' | translate }}</span>
-				<span class="negrita">{{ 'PrecioDescuentoFinal' | translate }}</span>
-				<br><br>
+                        <li>{{ 'PrecioFinal' | translate }} <span class="negrita">{{ 'TotalPrecio' | translate }}</span>. </li>
+                        <li class="negrita">{{ 'Aunque' | translate }}</li>
+                        <li>    
+                            <span>{{ 'RealizarPaga' | translate }}</span>
+                            <span class="negrita azul">{{ 'Adelanto' | translate }}</span><span>{{ 'Recibir' | translate }}</span>
+                            <span class="negrita azul">{{ 'DescuentoTotal' | translate }}</span><span>{{ 'SobrePrecioTotal' | translate }}</span>
+                            <span class="negrita">{{ 'PrecioDescuentoFinal' | translate }}</span>
+                        </li>
+                        <li>
 				{{ 'Cuenta' | translate }}<br>
 				<span class="negrita">{{ 'NumCuenta' | translate }}</span><br>
-				<span>{{ 'Asunto' | translate }}</span><br>
+				<span>{{ 'Asunto' | translate }}</span>
+                                <span class="light">{{ 'Concepto' | translate }}</span><br>
 			</li>	
 		</ul>
 	</div>

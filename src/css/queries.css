@@ -216,7 +216,7 @@
     .caja_inicial{
         display:block;
         margin:35px auto;
-        padding:2%;
+        padding:26px;
         max-width: 992px;
     }
     /*TEXTO ADICIONAL*/
@@ -224,15 +224,15 @@
         height:40px;
         margin: 35px auto;
         margin-bottom:0;
-        padding-left: 2%;
-        padding-right:2%;
+        padding-left: 26px;
+        padding-right:26px;
         width: 992px;
     }
     /*INFO ADICIONAL*/
     .caja_adicional{
         margin:0 auto;
         max-width: 992px;
-        padding: 2%;
+        padding: 26px;
     }
     li{
         font-size: 14px;
@@ -244,7 +244,7 @@
     }
     .ul_b{
         float:right;
-        margin-top: -355px;
+        margin-top: -345px;
         margin-bottom:0px;
     }
     .descarga{
@@ -263,10 +263,10 @@
     } 
     /*BOTONES*/
     #botones{
-        max-width: 1044.3px;
+        max-width: 1044px;
         margin:35px auto;
         background-image: url(../img/botones_big.jpg);
-        background-size: 1044.3px 250px;
+        background-size: 1044px 250px;
         background-repeat: no-repeat;
     }
     .pregunta{
@@ -294,7 +294,7 @@
     /*INICIO APUNTARSE*/
     .contacto_01, contacto_02{
         max-width: 992px;
-        padding:2%;
+        padding:26px;
         margin: 35px auto;
     }
     .contacto_02.active{
