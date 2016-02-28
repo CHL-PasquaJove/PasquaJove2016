@@ -20,11 +20,22 @@ configFunction.$inject = ['$routeProvider', '$translateProvider'];
 
 function configFunction($routeProvider, $translateProvider) {
 	
+	var preferredLanguage = 'es';
+
+	if ( window.location.hostname && window.location.hostname === 'www.pascuajoven.com') {
+		preferredLanguage = 'es';
+	} else if ( window.location.hostname && window.location.hostname === 'www.pasquajove.com' ) {
+		preferredLanguage = 'ca';
+	} else {
+		preferredLanguage = 'es';
+	}
+
+
 	$translateProvider.useStaticFilesLoader({
 		prefix: './i18n/language_',
 		suffix: '.json'
 	});
-	$translateProvider.preferredLanguage('es');
+	$translateProvider.preferredLanguage(preferredLanguage);
 	//$translateProvider.useLocalStorage();
 	$translateProvider.useSanitizeValueStrategy();
 

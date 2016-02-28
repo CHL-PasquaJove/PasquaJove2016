@@ -5,8 +5,8 @@
 	"Joven": "JOVEN",
 	"InitText":"Si existiera un camino en el que pudieras descubrir realmente quién eres y qué sentido tiene toda tu vida… ¿Acaso no lo tomarías?",
 	"AdditionalInfo": "Información adicional",
-        "Quees":"¿En qué consiste?",
-        "Explicacion":"La Pascua Joven es un encuentro de jóvenes que tiene lugar durante la Semana Santa.",
+    "Quees":"¿En qué consiste?",
+    "Explicacion":"La Pascua Joven es un encuentro de jóvenes que tiene lugar durante la Semana Santa.",
 	"EdadJovenes":"¿Jóvenes de qué edad?",
 	"EdadEntre":"De entre 15 y 30 años",
 	"Cuando":"¿Cuándo es?",
@@ -35,7 +35,7 @@
 	"Cuenta":"Para realizar cualquier ingreso, se realizará en la cuenta:",
 	"NumCuenta":"ES46 0081 0121 8700 0117 1720",
 	"Asunto":"Poniendo en el concepto: ",
-        "Concepto":"Nombre y apellidos + Pascua",
+    "Concepto":"Nombre y apellidos + Pascua",
 	"DescuentoNota":"Nota: A partir del segundo hermano (este incluido) se aplicará una tarifa familiar reducida",
 	"Descuento":"Este año...",
 	"ValorDescuento":"Consigue un descuento de 15€ si reservas tu plaza antes del 29 de febrero (paga y señal de 50€).\nEl descuento es aplicable tanto a la tarifa regular como a la tarifa\nfamiliar reducida",
@@ -70,5 +70,6 @@
 	"Movimiento":"Movimiento",
 	"InvitadoPor":"Invitado por",
 	"ProblemasComida":"Problemas con la comida",
-	"Enviando":"Enviando"
+	"Enviando":"Enviando",
+	"TotalRegistered":"Total registrados"
 }

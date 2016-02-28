@@ -67,11 +67,13 @@ function ResponsablePageController(responsablesService) {
 	}
 
 	function calculateAge(list) {
-		var actual, listLength = list.length;
+		var actual, listLength = list.length, refactorDate;
 		for ( var i = 0; i < listLength; i++ ) {
 			actual = list[i];
 
-			actual.age = _calculateAge( new Date(actual.birthday) );
+			refactorDate = actual.birth.split(/\//);
+
+			actual.age = _calculateAge( new Date([ refactorDate[1], refactorDate[0], refactorDate[2] ].join('/') ) );
 		}
 
 		vm.users = list;
