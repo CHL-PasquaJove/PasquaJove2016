@@ -71,5 +71,6 @@
 	"InvitadoPor":"Invitado por",
 	"ProblemasComida":"Problemas con la comida",
 	"Enviando":"Enviando",
-	"TotalRegistered":"Total registrados"
+	"TotalRegistered":"Total registrados",
+	"DuplicatedMail":"Este e-mail y está registrado"
 }

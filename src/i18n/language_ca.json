@@ -3,7 +3,7 @@
 	"XX":"XX",
 	"Pascua":"PASQUA",
 	"Joven": "JOVE",
-	"InitText":"Si existís un camí en el que poguessis descobrir realment qui ets i quin sentit té tota la teva vida... ¿No l'agafaries?",
+	"InitText":"Si existís un camí en el que poguessis descobrir realment qui ets i quin sentit té tota la teva vida... No l'agafaries?",
 	"AdditionalInfo": "Informació adicional",
 	"Quees":"En què consisteix?",
     "Explicacion":"La Pasqua Jove és una trobada de joves que té lloc durant la Setmana Santa.",
@@ -70,5 +70,6 @@
 	"Tlf":"Telèfon",
 	"Movimiento":"Moviment",
 	"InvitadoPor":"Invitat per",
-	"ProblemasComida":"Problemes amb el menjar"
+	"ProblemasComida":"Problemes amb el menjar",
+	"DuplicatedMail":"Aquest e-mail ja està registrat"
 }

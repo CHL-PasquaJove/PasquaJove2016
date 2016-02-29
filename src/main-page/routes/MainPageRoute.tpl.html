@@ -47,7 +47,7 @@
 		<ul class="ul_b">
                         <li class="negrita">{{ 'Llevar' | translate}}</li>
                         <li>{{ 'Material' | translate }}</li>
-			<li class="negrita">{{ 'Cuanto' | translate }}</li>
+						<li class="negrita">{{ 'Cuanto' | translate }}</li>
                         <li>{{ 'PrecioFinal' | translate }} <span class="negrita">{{ 'TotalPrecio' | translate }}</span>. </li>
                         <li class="negrita">{{ 'Aunque' | translate }}</li>
                         <li>    
@@ -103,6 +103,7 @@
 			<input class="boton_03" type="button" value="Enviar" ng-click="vm.submitNewUserForm()" ng-disabled="vm.newUserSuccess || vm.sendingData" ng-class="{'disabled': vm.newUserSuccess || vm.sendingData}">
 			<div class="server_response">
 				<span class="correcto" ng-if="vm.newUserSuccess">{{ 'RegistradoOk' | translate}}<i class="fa fa-check"></i></span>
+				<!--<span class="error" ng-if="vm.newUserError && vm.errorCode === 524291">{{ 'DuplicatedMail' | translate }}</span>-->
 				<span class="error" ng-if="vm.newUserError">{{ 'RegistradoKo' | translate}}</span>
                 <span ng-if="vm.sendingData" class="enviando">{{ 'Enviando' | translate }}<span class="e_01">.</span><span class="e_02">.</span><span class="e_03">.</span></span>
 			</div>
