@@ -43,6 +43,7 @@ module.exports = (grunt) ->
 			i18n: expand: true, cwd: 'src/', src: 'i18n/*', dest: 'www/'
 			css: expand: true, cwd: 'src/', src: 'css/*', dest: 'www/'
 			img: expand: true, cwd: 'src/', src: 'img/*', dest: 'www/'
+			auth: expand:true, cwd: 'src/', src: 'authorization/*', dest: 'www/'
 			images:
 				expand: true,
 				cwd: 'src',
