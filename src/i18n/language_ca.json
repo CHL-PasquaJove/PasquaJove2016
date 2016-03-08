@@ -71,5 +71,8 @@
 	"Movimiento":"Moviment",
 	"InvitadoPor":"Invitat per",
 	"ProblemasComida":"Problemes amb el menjar",
-	"DuplicatedMail":"Aquest e-mail ja està registrat"
+	"DuplicatedMail":"Aquest e-mail ja està registrat",
+	"FechaConsulta":"Data de la consulta",
+	"Pwd":"Contrasenya",
+	"User":"Usuari"
 }

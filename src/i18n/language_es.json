@@ -72,5 +72,8 @@
 	"ProblemasComida":"Problemas con la comida",
 	"Enviando":"Enviando",
 	"TotalRegistered":"Total registrados",
-	"DuplicatedMail":"Este e-mail y está registrado"
+	"DuplicatedMail":"Este e-mail y está registrado",
+	"FechaConsulta":"Fecha de la consulta",
+	"Pwd":"Contraseña",
+	"User":"Usuario"
 }

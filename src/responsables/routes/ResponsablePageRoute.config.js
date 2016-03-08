@@ -34,6 +34,10 @@ function ResponsablePageController(responsablesService) {
 	////////////
 
 	function activate() {
+		if ( window.sessionStorage.getItem('logged') === 'true' ){
+			vm.showLogin = false;
+			vm.showLists = true;
+		}
 		responsablesService.getUsers()
 			.then(getUsersResponse);
 		
@@ -51,6 +55,7 @@ function ResponsablePageController(responsablesService) {
 
 	function login() {
 		if ( vm.credentials.username === 'victor' && vm.credentials.password === 'victor') {
+			window.sessionStorage.setItem('logged', true);
 			vm.showLogin = false;
 			vm.showLists = true;
 		}

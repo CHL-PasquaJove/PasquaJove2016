@@ -160,8 +160,8 @@
 </style>
 <div class="login" ng-if="vm.showLogin">
     <div class="jesus"></div>
-    <input type="text" name="textfield" class="textfield_03" placeholder="Usuario" ng-model="vm.credentials.username">
-    <input type="password" name="textfield" class="textfield_03" placeholder="Contraseña" ng-model="vm.credentials.password" ng-keypress="$event.keyCode === 13 ? vm.login() : 0">
+    <input type="text" name="textfield" class="textfield_03" placeholder="{{ 'User' | translate }}" ng-model="vm.credentials.username">
+    <input type="password" name="textfield" class="textfield_03" placeholder="{{ 'Pwd' | translate }}" ng-model="vm.credentials.password" ng-keypress="$event.keyCode === 13 ? vm.login() : 0">
     <input class="boton_login" type="button" value="Validar" ng-click="vm.login()">
 </div>
 <div class="fondo" ng-if="vm.showLists">
@@ -198,6 +198,9 @@
             </div>
             <div>
                 <span><n>{{ 'Comentarios' | translate }}:</n> {{item.comment}}</span>
+            </div>
+            <div>
+                <span><n>{{ 'FechaConsulta' | translate }}:</n> {{item.timestamp}}</span>
             </div>
         </li>
     </ul>
